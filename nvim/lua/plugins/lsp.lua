@@ -3,68 +3,66 @@ return {
 	config = function()
 		-- Set up lspconfig.
 		local lsp = require("lspconfig")
-		local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
+		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 		--c/c++
-		lsp['clangd'].setup {
-			capabilities = capabilities
-		}
+		lsp["clangd"].setup({
+			capabilities = capabilities,
+		})
 
 		--lua
-		lsp['lua_ls'].setup {
-			capabilities = capabilities
-		}
+		lsp["lua_ls"].setup({
+			capabilities = capabilities,
+		})
 
 		--python
-		lsp['pyright'].setup {
-			capabilities = capabilities
-		}
+		lsp["pyright"].setup({
+			capabilities = capabilities,
+		})
 		-- html
-		lsp['html'].setup {
-			capabilities = capabilities
-		}
+		lsp["html"].setup({
+			capabilities = capabilities,
+		})
 
 		-- css
 
-		lsp['cssls'].setup {
-			capabilities = capabilities
-		}
+		lsp["cssls"].setup({
+			capabilities = capabilities,
+		})
 
 		-- tailwindcss
-		lsp['tailwindcss'].setup {
-			capabilities = capabilities
-		}
+		lsp["tailwindcss"].setup({
+			capabilities = capabilities,
+		})
 
 		--emmet
-		lsp['emmet_language_server'].setup {
-			capabilities = capabilities
-		}
-
+		lsp["emmet_language_server"].setup({
+			capabilities = capabilities,
+		})
 
 		--js
-		lsp['tsserver'].setup {
+		lsp["tsserver"].setup({
 			init_options = {
 				plugins = {
 					{
-						name = '@vue/typescript-plugin',
-						location = '/usr/lib/node_modules/typescript/lib/',
-						languages = { 'vue' },
+						name = "@vue/typescript-plugin",
+						location = "/usr/lib/node_modules/typescript/lib/",
+						languages = { "vue" },
 					},
 				},
 			},
-			filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-			capabilities = capabilities
-		}
+			filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+			capabilities = capabilities,
+		})
 		--Vue
-		lsp['volar'].setup {
-			capabilities = capabilities
-		}
+		lsp["volar"].setup({
+			capabilities = capabilities,
+		})
 
 		--typst
 
-		lsp['typst_lsp'].setup {
-			capabilities = capabilities
-		}
+		lsp["typst_lsp"].setup({
+			capabilities = capabilities,
+		})
 	end,
 }

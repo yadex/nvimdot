@@ -1,5 +1,5 @@
-return -- Example for neo-tree.nvim
-{
+-- Example for neo-tree.nvim
+return {
 	"nvim-neo-tree/neo-tree.nvim",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
@@ -11,9 +11,8 @@ return -- Example for neo-tree.nvim
 	config = function()
 		vim.keymap.set("n", "<c-y>", "<cmd>Neotree float toggle<CR>")
 		require("neo-tree").setup({
-			popup_border_style = "rounded"
+			popup_border_style = "rounded",
 		})
-		vim.api.nvim_set_hl(0, "NeoTreeFloatTitle", {bg="#282828"})
-
+		vim.api.nvim_set_hl(0, "NeoTreeFloatTitle", { bg = "#282828" })
 	end,
 }
