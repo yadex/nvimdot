@@ -46,16 +46,20 @@ return {
 				plugins = {
 					{
 						name = "@vue/typescript-plugin",
-						location = "/usr/lib/node_modules/typescript/lib/",
+						location = "/usr/lib/node_modules/@vue/language-server",
 						languages = { "vue" },
 					},
 				},
 			},
-			filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 			capabilities = capabilities,
 		})
 		--Vue
 		lsp["volar"].setup({
+			init_options = {
+				vue = {
+					hybridMode = false,
+				},
+			},
 			capabilities = capabilities,
 		})
 
