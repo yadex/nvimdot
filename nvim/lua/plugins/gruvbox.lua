@@ -1,7 +1,7 @@
 return {
 	{
 		"ellisonleao/gruvbox.nvim",
-		config = function()
+		init = function()
 			--override color
 			require("gruvbox").setup({
 				undercurl = true,
