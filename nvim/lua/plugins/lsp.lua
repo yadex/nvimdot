@@ -10,6 +10,14 @@ return {
 			capabilities = capabilities,
 		})
 
+		--rust
+		lsp["rust_analyzer"].setup({
+			root_dir = function(fname)
+				return require("lspconfig").util.find_git_ancestor(fname) or vim.fn.getcwd()
+			end,
+			capabilities = capabilities,
+		})
+
 		--lua
 		lsp["lua_ls"].setup({
 			capabilities = capabilities,
@@ -17,6 +25,9 @@ return {
 
 		--python
 		lsp["pyright"].setup({
+			root_dir = function(fname)
+				return require("lspconfig").util.path.dirname(fname) or vim.loop.cwd()
+			end,
 			capabilities = capabilities,
 		})
 		-- html
@@ -46,7 +57,8 @@ return {
 				plugins = {
 					{
 						name = "@vue/typescript-plugin",
-						location = "/usr/lib/node_modules/@vue/language-server",
+						-- location = "/usr/lib/node_modules/@vue/language-server",
+						location = "$HOME/.local/share/nvim/mason/packages/vue-language-server/node_modules/@vue/language-server/",
 						languages = { "vue" },
 					},
 				},
