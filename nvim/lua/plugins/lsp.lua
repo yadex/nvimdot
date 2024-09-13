@@ -20,6 +20,13 @@ return {
 
 		--lua
 		lsp["lua_ls"].setup({
+			settings = {
+				Lua = {
+					diagnostics = {
+						globals = { "vim" },
+					},
+				},
+			},
 			capabilities = capabilities,
 		})
 
