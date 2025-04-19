@@ -106,13 +106,7 @@ return {
 
 		--typst
 
-		lsp["tinymist"].setup({
-			capabilities = capabilities,
-		})
-
-    --go
-
-		lsp["gopls"].setup({
+		lsp["typst_lsp"].setup({
 			capabilities = capabilities,
 		})
 	end,
