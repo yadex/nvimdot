@@ -1,5 +1,6 @@
 -- packages
 require("lazynvim")
+require("lsp")
 
 -- basic setup
 local set = vim.opt
@@ -17,6 +18,9 @@ set.cursorline = true
 set.mouse = ""
 set.cmdheight = 0
 set.shortmess = "aItFoOSs"
+
+-- windowbar
+vim.o.winborder = "rounded"
 
 --neovide
 if vim.g.neovide then
