@@ -26,6 +26,10 @@ return {
 						row = 5,
 						col = "50%",
 					},
+					size = {
+						width = "50%",
+						height = "auto",
+					},
 				},
 			},
 		})
